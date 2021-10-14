@@ -32,13 +32,9 @@ app.get('/weatherData', function (request, response) {
 
 // Create post route to make new entry in the apps endpoint consisting of the data received from the client side POST.
 app.post('/postWeatherData', function (req, res) {
-    // console.log(req.body);
-    // projectData.date = req.body.date;
-    // console.log(projectData.date);
-    // projectData.temp = req.body.temp;
-    // console.log(projectData.temp);
-    // projectData.content = req.body.content;
-    // console.log(projectData.content);
-    projectData = {...req};
+    
+    projectData.date = req.body.date;
+    projectData.temp = req.body.temp;
+    projectData.content = req.body.content;    
     res.end();
 });

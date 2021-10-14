@@ -41,11 +41,8 @@ const getWeatherData = async (Wurl) => {
     const result = await fetch(Wurl);
     try { // Get the api data
         const weatherData = await result.json();
-        console.log(weatherData);
         const temprature = weatherData.main.temp;        
-        console.log(newDate);
-        console.log(temprature);
-        console.log(content);
+        
         await fetch('/postWeatherData', {
             method: "POST",
             credentials: 'same-origin',
@@ -57,8 +54,7 @@ const getWeatherData = async (Wurl) => {
             }),
         });
         const getData = await fetch('/weatherData');
-        const receivedData = await getData.json();
-        console.log(receivedData);    
+        const receivedData = await getData.json();          
         return receivedData;
     }
     catch (error) { // If there is an error catch it, and write it in the console
