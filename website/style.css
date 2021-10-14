@@ -8,8 +8,8 @@ body{
     grid-auto-rows: minmax(150px, auto);
     /* grid-template-columns:  */
     height:100vh;
-    background: #f23557;
-    color: #f0d43a;
+    background: lightblue;
+    color: navy;
     justify-content: center;
     grid-gap: 1em;
     font-size: 20px;
@@ -17,7 +17,8 @@ body{
 }
 
 .holder{
-
+display: inline;
+justify-content: left;
 }
 
 .entry{
@@ -57,8 +58,8 @@ input{
     display:block;
     height: 60px;
     width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
+    background:lightgray;
+    color: black;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
     border: none;
@@ -79,8 +80,8 @@ h1{
 }
 
 textarea{
-    background:#22b2da;
-    color: #f0d43a;
+    background:lightgray;
+    color: black;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
@@ -93,19 +94,19 @@ button:focus {
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
+    color: black; 
     font-family: 'Oswald', sans-serif;
 
 } 
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
+    color: black; 
     font-family: 'Oswald', sans-serif;
 
 } 
   
 ::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
+    color: black; 
     font-family: 'Oswald', sans-serif;
 
 } 

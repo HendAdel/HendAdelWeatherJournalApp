@@ -13,13 +13,32 @@ app.use(bodyParser.json());
 
 // Cors for cross origin allowance
 const cors = require('cors');
+app.use(cors);
 // Initialize the main project folder
 app.use(express.static('website'));
 
 
 // Setup Server
-const port = 3333;
-const server = app.listen(port,listening);
-function listening(){
+const port = 8880;
+const server = app.listen(port, listening);
+function listening() {
     console.log(`server start on port:  ${port}`);
 }
+
+// Create Get routes
+app.get('/weatherData', function (request, response) {
+    response.send(projectData);
+});
+
+// Create post route to make new entry in the apps endpoint consisting of the data received from the client side POST.
+app.post('/postWeatherData', function (req, res) {
+    // console.log(req.body);
+    // projectData.date = req.body.date;
+    // console.log(projectData.date);
+    // projectData.temp = req.body.temp;
+    // console.log(projectData.temp);
+    // projectData.content = req.body.content;
+    // console.log(projectData.content);
+    projectData = {...req};
+    res.end();
+});
